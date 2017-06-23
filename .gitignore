@@ -4,6 +4,8 @@
 !.gitignore
 /.git
 /.idea
+/log
+/logs
 *.iml
 .classpath
 .project
