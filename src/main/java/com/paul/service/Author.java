@@ -1,13 +1,17 @@
-package com.paul.spring;
+package com.paul.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "author")
-public class AuthorSettings {
+public class Author {
+
+	@Value("${author.name}")
 	private String name;
 
+	@Value("${author.age}")
 	private String age;
 
 	public String getName() {
