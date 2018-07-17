@@ -29,4 +29,8 @@ public class AuthorService implements ApplicationContextAware, EnvironmentAware{
     public void setEnvironment(Environment environment) {
         this.environment = environment;
     }
+
+    public String selfIntroduction() {
+        return "hi, i'm AuthorService";
+    }
 }

@@ -2,6 +2,8 @@ package com.paul.controller;
 
 import com.paul.service.Author;
 import com.paul.service.AuthorService;
+import com.paul.service.ServiceOne;
+import com.paul.utils.ServiceTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,9 @@ public class AuthorController {
     @ResponseBody
     @RequestMapping(value = "/service")
     public String authorService() {
+        ServiceOne serviceOne = ServiceTypeEnum.ServiceOne.getServiceOne();
+        serviceOne.service();
+
         return authorService.getEnvironment().getProperty("book.author") +
                 authorService.getEnvironment().getProperty("book.name");
 //        return Arrays.toString(authorService.getEnvironment().getActiveProfiles());

@@ -1,5 +1,7 @@
 package com.paul.zmm_boot;
 
+import com.paul.service.ServiceOne;
+import com.paul.utils.ServiceTypeEnum;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
